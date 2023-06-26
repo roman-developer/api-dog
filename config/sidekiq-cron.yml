@@ -1,0 +1,5 @@
+cron_jobs:
+  import_dogs:
+    cron: "0 0 * * *"
+    class: ImportDogsJob
+    queue: default

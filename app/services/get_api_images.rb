@@ -8,7 +8,7 @@ class GetApiImages
     dogs_ary = []
 
     (1..@count).each do
-      response = Faraday.get('https://dog.ceo/api/breeds/image/random')
+      response = Faraday.get(ENV['API_DOGS_URL'])
       
       if response.status == 200
         image = JSON.parse(response.body)["message"]

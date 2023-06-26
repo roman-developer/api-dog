@@ -1,22 +1,14 @@
-class Api::V1::DogsController < ApplicationController
-  # before_action :set_api_v1_dog, only: %i[show update destroy]
+# frozen_string_literal: true
 
-  # GET /api/v1/dogs
-  def index
-    @api_v1_dogs = Dog.all
+module Api
+  module V1
+    class DogsController < ApplicationController
+      # GET /api/v1/dogs
+      def index
+        @api_v1_dogs = Dog.all.paginate(page: params[:page], per_page: 10)
 
-    render json: @api_v1_dogs
-  end
-
-  private
-
-  # Use callbacks to share common setup or constraints between actions.
-  def set_api_v1_dog
-    @api_v1_dog = Dog.find(params[:id])
-  end
-
-  # Only allow a list of trusted parameters through.
-  def api_v1_dog_params
-    params.fetch(:api_v1_dog, {})
+        render json: @api_v1_dogs
+      end
+    end
   end
 end

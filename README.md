@@ -1,24 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## API Dogs
 
-Things you may want to cover:
+<b>Api Dogs</b> is an example project of API mode in Rails.
 
-* Ruby version
+## Motivation
 
-* System dependencies
+I have been motivated to build this application because I wanted to build an example project in Ruby on Rails API mode. This project is part of a Code Challenge where we have had the mission to import some data (dogs `images` and `names`) in our local database from an external Dogs API (https://dog.ceo/api/breeds/image/random) and create an endpoint to display the information. The import has been processed in a scheduled task that runs every day.
 
-* Configuration
+## Tech/framework used
 
-* Database creation
+Built with [Ruby on Rails](https://rubyonrails.org/).
+- Ruby version: 3.1.2p20
+- Rails version: 7.0.3
 
-* Database initialization
+Database:
+- Sqlite
 
-* How to run the test suite
+Frontend:
+- No FE, data exposed in JSON format.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Application screenshots
 
-* Deployment instructions
+- Example of successfull requests:
 
-* ...
+[![Captura-de-Pantalla-2023-06-26-a-las-13-03-32.png](https://i.postimg.cc/4dbJwNPy/Captura-de-Pantalla-2023-06-26-a-las-13-03-32.png)](https://postimg.cc/jw20STGY)
+
+[![Captura-de-Pantalla-2023-06-26-a-las-17-20-37.png](https://i.postimg.cc/VkwtVh9V/Captura-de-Pantalla-2023-06-26-a-las-17-20-37.png)](https://postimg.cc/GHM9Bq5F)
+
+
+## Installation
+
+1. Install [Ruby on Rails](https://edgeguides.rubyonrails.org/getting_started.html#creating-a-new-rails-project-installing-rails)
+2. Clone this repository.
+3. Database set up:
+- Create the database `rails db:create`
+- Run migrations `rails db:migrate`
+- Run seeds `rails db:seed`
+
+## Test
+
+- `rspec spec/`
