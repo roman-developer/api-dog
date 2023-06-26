@@ -41,3 +41,17 @@ Frontend:
 ## Test
 
 - `rspec spec/`
+
+## Run
+
+- Execute: `rails server`
+- Access to http://localhost:3000/api-docs/index.html to see swagger information API
+- Example of request:
+```
+curl -X 'GET' \
+  'http://localhost:3000/api/v1/dogs' \
+  -H 'accept: */*'
+```
+
+
+
